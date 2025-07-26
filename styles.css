@@ -492,141 +492,156 @@ a {
 
     /* Navbar for Mobile */
     .navbar {
-        padding: 15px;
-        /* Reduced padding for smaller screens */
+        flex-direction: row; /* Keep elements in a row */
         justify-content: space-between;
+        align-items: center;
+        padding: 15px; /* Adjust padding as needed */
+        max-width: 100%; /* Ensure it takes full width */
     }
 
-    .nav-links .cart {
-        display: inline-block;
-        margin-left: 15px;
-        /* Adjusted margin */
+    .navbar .logo img {
+        height: 40px; /* Smaller logo for mobile */
     }
 
     .nav-links {
-        display: none;
-        /* Hide nav links, typically for a hamburger menu toggle */
+        display: flex; /* Make sure nav-links are displayed */
+        align-items: center;
+        gap: 10px; /* Adjust gap between links */
     }
 
-    .navbar .logo {
-        order: 1;
+    .nav-links .home,
+    .nav-links .shop,
+    .nav-links .about {
+        display: none; /* Hide these links as per the image */
     }
 
-    .navbar .nav-links .cart {
-        order: 2;
+    .nav-links .cart {
+        display: block; /* Ensure cart is visible */
+        font-size: 14px; /* Adjust font size for cart */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu as it's not in the design for this breakpoint */
     }
 
     /* Banner for Mobile */
     .banner {
-        flex-direction: column;
-        padding: 30px 15px;
-        /* Reduced padding */
+        flex-direction: column-reverse; /* Image on top, text below */
+        padding: 40px 0px 20px 20px; /* Adjusted padding for mobile */
         text-align: center;
         gap: 20px;
-        /* Reduced gap */
-    }
-
-    .banner-content {
-        order: 2;
-        max-width: 100%;
-        text-align: left;
     }
 
     .banner-image {
+        order: 1; /* Image on top */
         margin-bottom: 15px;
-        /* Adjusted margin */
+        padding-right: 0px;
+        display: flex; /* Use flex to center the image */
+        justify-content: right; /* Center the image */
+    }
+    .banner-content {
+        max-width: 100%;
+        text-align: left; /* Align text to the left as per the image */
+        padding-left: 5px; /* Add a small left padding for the text */
+        padding-right: 5px; /* Add a small right padding for the text */
     }
 
+
+
     .banner-image img {
-        width: 100%;
-        max-width: 280px;
-        /* Further reduced max-width for very small screens */
+        width: 100%; /* Image takes full width of its container */
+        max-width: 800px; /* Adjust max-width to fit the design, or make it slightly larger if needed */
         height: auto;
+        
     }
 
     .banner-content h1 {
-        font-size: 28px;
-        /* Reduced font size */
-        line-height: 1.2;
+        font-size: 35px; /* Adjusted font size for heading */
+        line-height: 1.1; /* Tighter line height */
+        text-align: left; /* Ensure title is left-aligned */
+        font-weight: 600;
     }
 
     .banner-content .bold {
-        display: block;
-        margin-bottom: 0px;
-        line-height: 1.1;
+        display: inline; /* Keep on the same line if possible */
+        margin-bottom: 0;
     }
 
     .banner-content .highlight {
-        margin-left: 0;
-        display: block;
+        display: inline; /* Keep on the same line if possible */
+        margin-left: 5px; /* Small margin between words */
         line-height: 1.1;
     }
 
     .banner-content .highlight:last-of-type {
-        margin-bottom: 0;
+        display: block; /* Make "FLOWERS" go to a new line */
+        margin-left: 0; /* No left margin for the new line */
     }
+
 
     .banner-content p {
         margin-top: 10px;
-        /* Reduced margin */
-        font-size: 13px;
-        /* Reduced font size */
+        font-size: 14px; /* Smaller font size for paragraph */
+        text-align: left; /* Ensure paragraph is left-aligned */
+        line-height: 1.5;
     }
 
-    /* Plants section adjustments */
-    .plants-box {
-        padding: 30px 15px;
-        /* Reduced padding */
-    }
+ /* Plants section adjustments */
+.plants-box {
+    padding: 30px 10px;
+}
 
-    .plants-title {
-        font-size: 28px;
-        /* Reduced font size */
-    }
+.plants-title {
+    font-size: 28px;/
+}
 
-    .plants-description {
-        font-size: 13px;
-        /* Reduced font size */
-        margin-bottom: 25px;
-        /* Adjusted margin */
-    }
+.plants-description {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
 
-    .plant-cards {
-        grid-template-columns: 1fr;
-        /* Single column for plant cards on very small screens */
-        gap: 15px;
-        /* Reduced gap */
-    }
+.plant-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 0.5px;
+}
 
-    .plant-card img {
-        height: 120px;
-        /* Reduced image height */
-    }
+.plant-card {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 10px 15px 10px 15px;
+}
 
-    .plant-card h3 {
-        font-size: 16px;
-        /* Reduced font size */
-    }
+.plant-card img {
+    height: 100%;
+    max-height: 300px; /* Adjusted height for smaller screens */
+    width: 100%;
+}
 
-    .plant-card p {
-        font-size: 14px;
-        /* Reduced font size */
-    }
+.plant-card h3 {
+    font-size: 16px;
+    padding-bottom: 1px;
+}
 
-    .plant-card button {
-        padding: 10px;
-        /* Reduced padding */
-        font-size: 14px;
-        /* Reduced font size */
-    }
+.plant-card p {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 1px;
+}
+
+.plant-card button {
+    padding: 15px 25px;
+    font-size: 15px;
+    border-radius: 0px;
+}
 
     /* Plant Lover section adjustments */
     .plant-lover {
         flex-direction: column;
-        padding: 30px 15px;
-        /* Reduced padding */
+        padding: 30px 20px 60px 20px;
         gap: 20px;
-        /* Reduced gap */
         text-align: center;
     }
 
@@ -648,9 +663,8 @@ a {
     }
 
     .lover-content h2 {
-        font-size: 24px;
-        /* Reduced font size */
-        line-height: 1.3;
+        font-size: 28px;
+        line-height: 1.5;
         text-align: left;
         font-weight: 600;
     }
@@ -662,42 +676,44 @@ a {
     .lover-content ul li {
         text-align: left;
         font-size: 13px;
-        /* Reduced font size */
-        margin-bottom: 10px;
-        /* Reduced margin */
+        margin-bottom: 20px;
         margin-left: 20px;
     }
 
     /* Deals section adjustments */
     .deals {
         padding: 30px 15px;
-        /* Reduced padding */
     }
 
     .deals h2 {
         font-size: 28px;
-        /* Reduced font size */
     }
 
     .deals p {
         font-size: 13px;
-        /* Reduced font size */
         margin-bottom: 30px;
-        /* Adjusted margin */
     }
 
-    .deal-cards-container {
+    .deal-layout { /* Changed from .deal-cards-container to .deal-layout */
         flex-direction: column;
         /* Stack cards vertically */
         gap: 15px;
         /* Reduced gap */
+        align-items: center; /* Center the stacked cards */
     }
 
     .deal-card {
         width: 100%;
+        max-width: 300px; /* Constrain max-width for consistency */
         height: 150px;
         /* Reduced height for deal cards */
     }
+
+    .deal-left-column {
+        width: 100%;
+        align-items: center; /* Center the items within the column */
+    }
+
 
     .deal-overlay h3 {
         font-size: 18px;
@@ -744,62 +760,49 @@ a {
 
     .join-form button {
         width: 90%;
-        /* Adjusted width */
         max-width: 280px;
-        /* Max width for button */
         padding: 12px 15px;
-        /* Reduced padding */
         border-radius: 4px;
     }
 
     /* Footer adjustments */
     .custom-footer {
         padding: 30px 15px;
-        /* Reduced padding */
         flex-direction: column;
-        /* Stack footer sections vertically */
         gap: 20px;
-        /* Reduced gap */
     }
 
     .footer-left {
         max-width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .footer-left img {
-        width: 100px;
-        /* Reduced logo size */
-        margin: 0 auto 10px auto;
+        width: 120px; /* Adjusted logo size for footer */
+        margin: 0 0 10px 0; /* Align to left, small bottom margin */
     }
 
     .footer-left p {
         font-size: 13px;
-        /* Reduced font size */
     }
 
     .footer-middle {
         flex-direction: column;
         gap: 10px;
-        /* Reduced gap */
         width: 100%;
     }
 
     .footer-links-group {
-        align-items: center;
-        /* Center align links in groups */
+        align-items: flex-start; /* Align links to the left */
         gap: 15px;
-        /* Reduced gap */
     }
 
     .footer-links-group a {
         font-size: 13px;
-        /* Reduced font size */
     }
 
     .footer-right {
-        justify-content: center;
-        /* Center social icons */
+        justify-content: flex-start; /* Align social icons to the left */
         margin-top: 10px;
         width: 100%;
     }
