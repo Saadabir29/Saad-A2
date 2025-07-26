@@ -687,26 +687,26 @@ a {
 
     .deals h2 {
         font-size: 28px;
+        font-weight: 600;
     }
 
     .deals p {
-        font-size: 13px;
-        margin-bottom: 30px;
+        font-size: 14px;
+        margin-bottom: 60px;
+        padding: 10px 20px 0px 20px;
+        text-align: center;
     }
 
-    .deal-layout { /* Changed from .deal-cards-container to .deal-layout */
+    .deal-layout { 
         flex-direction: column;
-        /* Stack cards vertically */
         gap: 15px;
-        /* Reduced gap */
-        align-items: center; /* Center the stacked cards */
+        align-items: center;
     }
 
     .deal-card {
         width: 100%;
-        max-width: 300px; /* Constrain max-width for consistency */
-        height: 150px;
-        /* Reduced height for deal cards */
+        max-width: 400px;
+        height: 200px;
     }
 
     .deal-left-column {
@@ -714,60 +714,56 @@ a {
         align-items: center; /* Center the items within the column */
     }
 
-
+    .deal-overlay {
+        padding: 30px 0px 0px 0px;
+    }
     .deal-overlay h3 {
         font-size: 18px;
-        /* Reduced font size */
+        text-align: center;
+        align-text: center;
     }
 
     .deal-overlay button {
         font-size: 13px;
-        /* Reduced font size */
-        padding: 6px 12px;
-        /* Adjusted padding */
+        padding: 0px 12px;
+        align-content: center;
     }
 
     /* Join section adjustments */
     .join {
-        padding: 60px 20px;
-        /* Reduced padding */
+        padding: 130px 0px 80px;
     }
 
     .join h2 {
-        font-size: 20px;
-        /* Reduced font size */
+        font-size: 25px;
         margin-bottom: 15px;
-        /* Reduced margin */
+        font-weight: 500;
     }
 
     .join-form {
-        flex-direction: column;
-        /* Stack input and button vertically */
+        display: flex;
         align-items: center;
-        gap: 10px;
     }
 
     .join-form input {
-        width: 90%;
-        /* Adjusted width */
-        max-width: 280px;
-        /* Max width for input */
-        padding: 12px 15px;
-        /* Reduced padding */
-        border-radius: 4px;
-        text-align: center;
+        width: 60%;
+        max-width: 250px;
+        padding: 20px 30px 20px 25px;
+        text-align: start;
+        font-size: 20px;
     }
 
     .join-form button {
-        width: 90%;
-        max-width: 280px;
-        padding: 12px 15px;
-        border-radius: 4px;
+        width: 30%;
+        max-width: 250px;
+        padding: 21px 15px;
+        font-size: 18px;
+        font-weight: 300;
     }
 
     /* Footer adjustments */
     .custom-footer {
-        padding: 30px 15px;
+        padding: 30px 15px 0px;
         flex-direction: column;
         gap: 20px;
     }
@@ -778,12 +774,12 @@ a {
     }
 
     .footer-left img {
-        width: 120px; /* Adjusted logo size for footer */
+        width: 220px; /* Adjusted logo size for footer */
         margin: 0 0 10px 0; /* Align to left, small bottom margin */
     }
 
     .footer-left p {
-        font-size: 13px;
+        font-size: 17px;
     }
 
     .footer-middle {
@@ -793,17 +789,22 @@ a {
     }
 
     .footer-links-group {
-        align-items: flex-start; /* Align links to the left */
-        gap: 15px;
+        align-items: flex-start;
+        gap: 25px;
     }
 
     .footer-links-group a {
-        font-size: 13px;
+        font-size: 17px;
     }
 
     .footer-right {
-        justify-content: flex-start; /* Align social icons to the left */
-        margin-top: 10px;
+        justify-content: flex-start;
         width: 100%;
+        padding-bottom: 70px;
+    }
+    .footer-right img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
     }
 }
